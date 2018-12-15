@@ -5,20 +5,17 @@ else  assign i=D; and add directly i to sum eg if D=3 then i=3 then i=13 then i=
 #include <stdlib.h>
 int main()
 {
-    int N,D,i,sum;
+    int N,D,i,sum=0;
     scanf("%d %d",&N,&D);
-    sum=0;
     i=D;
     while(i<=N)
     {
         if((N<10) && (D>N)){
             sum=0;
-            printf("yes");
             break;}
         else
         {
             sum=sum+i;     // here i am directly adding D, D+10,...
-            printf("%d",i,sum);
         }
         i=i+10;
     }
@@ -26,6 +23,6 @@ int main()
         printf("-1");
     }
     else{
-        printf("sum=%d",sum);}
+        printf("sum = %d",sum);}
     return 0;
 }
